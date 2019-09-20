@@ -9,7 +9,7 @@
         <meta name="author" content="박윤진" />
     </head>
     <body>  
-            <img src="dmdmd.jpg" />
+            <img src="images/dmdmd.jpg" width="300"/>
         <!-- h1~h6 제목을 입력할때 쓰는 태그 / hn 순번x 깊이(depth)하위순번?)o-->
         <h1>대한민국</h1>
         <h2>서울</h2>
@@ -18,7 +18,7 @@
         <h2>경기도</h2>
         <h3>과천시</h3>
         <h3>의왕시</h3>
-        <p>계원예술대학겨</p>
+        <p>계원예술대학교</p>
         <h3>안양시</h3>
         <h2>강원도</h2>
         <h2>부산광역시</h2>
@@ -36,7 +36,7 @@
         <hr />
 
         <!-- image 그림 = img : 독립형 태그로 이루어짐-->
-        <img src="dkdkd.jpg" width="300" />
+        <img src="images/dkdkd.jpg" width="300" />
         
         <!-- p 문단- 서술형으로 되어 있는 한 주제에 대한 글이 들어갑니다. , 주제가 바뀌면 새로운 문단이 시작됩니다. -->
         <p>
@@ -73,9 +73,110 @@
             <dt>3주차 리서치 폴더 열기.</dt>
             <dd>이미지 및 문서 파일 정리</dd>
         </dl>
+
+        <img src="images/다운로드.jpg"width="300"/>
+        <br/>
+        <!-- strong /em - 강조할얘기를집어넣는다  <반대됨>   b , i -->
+        <strong>집</strong>
+        <em>보내주세요,,,</em>
+
+        <b>납치 당했어요,,,</b>
+        <i>학교한테(속닥)</i>
+
+        <!-- ins 첨부글 , del 삭제글 <반대됨> u, strike-->
+        <ins>스위스</ins>
+        <del>안락사 최고</del>
+
+        <u>네덜란드</u>
+        <strike>안락사 좋아</strike>
+
+        <!-- sup 윗첨자 , sub 아랫첨자    ex)  22 : 제곱수 , 2의 2승 H20 : 물의 화학식-->
+        2<sup>2</sup> : 제곱수 , 2의 2승
+        H<sub>2</sub>0 : 물의 화학식
+
+        <style>
+        table, tr, td {
+                border: solid 1px orange;
+            }   
+            </style>
+
+        <!-- table  도표-->
+        <!-- table , tr 한줄 , td 한칸(열) , th 헤드(제목)-->
+        <!-- summary 요약 , caption 표제 -->
+        <table summary="과제 요약 , 저승메이트 명단">
+            <caption>[표1] 과제 요약</caption>
+            <!-- thead , tbody , tfoot (t = table) -->
+            <thead>
+            <tr> <!-- scope = col , row -->
+                <th scope="col">살</th>
+                <th scope="col">려</th>
+                <th scope="col">주</th>
+                <th scope="col">세</th>
+                <th scope="col">요</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <!-- colspan 열늘리기 - 가로로 늘림, rowspan 헹늘리기 - 세로로 늘림-->
+                <td colspan="2">졸</td> <!-- 가로로 두칸 차지함-->
+                <td rowspan="2">도</td> <!-- 세로로 두칸 차지함-->
+                <td>해</td>
+                <td>요</td>
+            </tr>
+            <tr>
+                <td>같</td>
+                <td>이</td>
+                <td>해</td>
+                <td>요</td>
+                </tr>
+            </tr>
+        </tbody>
+        </table>
+
+
+        <table>
+                <tbody>
+                        <tr>
+                            <!-- colspan 열늘리기 - 가로로 늘림, rowspan 헹늘리기 - 세로로 늘림-->
+                            <td colspan="3">up</td> <!-- 가로로 두칸 차지함-->
+                            <td rowspan="2">right</td> <!-- 세로로 두칸 차지함-->
+                        </tr>
+                        <tr>
+                            <td rowspan="2">left</td>
+                            <td colspan="2">center</td>
+                        </tr>
+                        <tr>
+                             <td colspan="3">down</td>
+                        </tr>
+                    </tbody>
+        </table>
+
+<form>
+    <input type="text" placeholder="아이디를 입력하세요."/>
+    <input type="passward" placeholder="패스워드를 입력하세요"/>
+    <input type="radio" name="bt2"/>
+    <input type="radio" name="bt2"/>
+    <input type="radio" name="bt2"/>
+
+    <input type="checkbox"/>
+    <input type="checkbox"/>
+    <input type="checkbox"/>
+    <input type="checkbox"/>
+
+    <select>
+        <option> 과제하기 </option>
+        <option> 게임하기 </option>
+    </select>
+
+    <textarea cols="30" raws="5"> </textarea>
+
+    <input type="button" value="버튼이름"/>
+    <input type="button" value="테스트버튼" onclick="alert('테스트 버튼이 눌렸습니다.')"/>
+
+    <input type="submit" value="제출" />
+
+    
+</form>
+
     </body>
-
-
-
-
 </html>
