@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>layout2</title>
+        <meta charset="utf-8" />
+        <style>
+            header{
+                background-color: rgb(48, 11, 107);
+                color: azure;
+            }
+
+            .clear { clear:both; height:0; overflow:hidden; }
+            .float_left{ float: left; } /* 공간이 넉넉하면 가로로 나열되지만 공간이 부족하면 후순위부터 내려가게 됨*/
+            .float_right{ float: right;}
+
+            #logo_back{
+                color: gold;
+            }
+            header>nav>ul>li{
+                float:left;
+                padding : 0px 10px;
+                list-style: none;
+            }
+            header>h1{
+                margin: 0px;
+            }
+            #main_visual{
+                height: 600px;
+                background-image: url("images/layout2_visual.jpg");
+                background-size : 100% auto;
+                background-size: cover; /*이거 개많이 씀*/
+                background-repeat: no-repeat;
+                /* repeat . no-repeat , repeat-x ,repeat-y*/
+                background-color: rgb(0, 0, 0);
+                background-position: 50% 50%; /*50%로 적은 것은 가로세로 기준으로 가운데로 정렬하겠다는 것이당*/
+                }
+
+        </style>
+    </head>
+
+
+    <body>
+        <div id="wrap">
+            <header>
+                <h1 class="float_left"> <!--h1은 기본적으로 설정되어 있는 여백이 있음 때문에 덮어씌우는 방식으로 여백을 설정함-->
+                    <span>MY</span> <span id = "logo_back">POLIO</span>
+                    <!-- div span 의미없이 구획나누기 좋음-->
+                </h1>
+                <nav class="float_right">
+                    <ul>
+                        <li>HOME</li>
+                        <li>ABOUT ME</li>
+                        <li>SERVICE</li>
+                        <li>MY WORK</li>
+                        <li>CONTACT ME</li>
+                        <div class="clear"></div>
+                    </ul>
+                </nav>
+                <div class="clear"></div>
+            </header>
+            <div id="main_visual">content1</div>
+            <div>dontent2</div>
+        </div>
+    </body>
+</html>
