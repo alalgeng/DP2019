@@ -3,12 +3,53 @@
     <head>
     <title>test</title>
     <meta charset="utf-8"/>
-
     <style>
-    </style>
-    
+        .clear { clear:both; height:0; overflow:hidden; }
+        .float_left{ float: left; } /* 공간이 넉넉하면 가로로 나열되지만 공간이 부족하면 후순위부터 내려가게 됨*/
+        .float_right{ float: right;}
+        .long_line{
+            border-bottom: solid 1px rgb(71, 67, 78);
+            width: 70px;
+            margin: 10px 0px;
+            }
+        body { margin: 0; }
+        .navbar>ul {
+                    
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            }
+        .navbar>ul>li {
+            display: inline-block;
+            padding: 0;
+            }
+        .navbar>ul>li>a {
+            display: block;
+            text-decoration: none;
+            padding: 10px 20px;
+            color: rgb(0, 0, 0);
+            }
+        .navbar>ul>li>a:hover { background: rgb(72, 6, 116); }
+    </style>    
     </head>
-    <body>
 
+    <body>
+        
+        <div id="wrap">
+            <header>
+                <h1>5 Seconds of Summer</h1>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="">HOME</a></li>
+                        <li><a href="">MEMBER</a></li>
+                        <li><a href="">ALBUM</a></li>
+                        <li><a href="">FESTIVAL</a></li>                     
+                    </ul>
+                </nav>
+                <div class="clear"></div>
+            </header>
+        <div id="contents">
+            <img src="image1/5sos_01.png" width="1520"/>
+        </div>
     </body>
 </html>
