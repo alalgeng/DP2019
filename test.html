@@ -27,29 +27,60 @@
             display: block;
             text-decoration: none;
             padding: 10px 20px;
-            color: rgb(0, 0, 0);
+            color: rgb(238, 255, 0);
             }
-        .navbar>ul>li>a:hover { background: rgb(72, 6, 116); }
+        .navbar>ul>li>a:hover { background: rgb(71, 71, 71); }
+        .long_line{
+                border-bottom: solid 3px rgb(255, 255, 255);
+                width: 400px;
+                margin: 10px 0px;
+        }
+        .h1{
+            margin: 20px;
+            color: yellow;
+        }
+        .backimg{
+            background-image: url("image1/teethfamily.jpg");
+            background-size : 100% auto;
+            background-size: cover; /*이거 개많이 씀*/
+            background-repeat: no-repeat;
+            opacity: 50%;
+        }
+        h2{
+            margin: 100px 20px 20px 20px;
+            color: white;
+        }
+        .p1{
+            font-size: 100px;
+            color: white;
+            float: right;
+            padding-right: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
     </style>    
     </head>
 
-    <body>
+    <body style="background-color: black;">
         
         <div id="wrap">
             <header>
-                <h1>5 Seconds of Summer</h1>
+                <h1 class="h1"><a href="test.html"><img src="image1/5sosy.png" width="150"/></a></h1>
                 <nav class="navbar">
                     <ul>
-                        <li><a href="">HOME</a></li>
                         <li><a href="">MEMBER</a></li>
                         <li><a href="">ALBUM</a></li>
                         <li><a href="">FESTIVAL</a></li>                     
                     </ul>
                 </nav>
                 <div class="clear"></div>
+                <img src="image1/teethmain.png" width="1520"/>
             </header>
-        <div id="contents">
-            <img src="image1/5sos_01.png" width="1520"/>
-        </div>
+        
+        <div id="contents1">
+            <h2>5SOS의 새로운 음악을 즐겨보세요</h2>
+            <div class="long_line"></div>
+            <p class="p1">TEETH</p>
+        <div class="backimg"></div>
+        </div>  
     </body>
 </html>
