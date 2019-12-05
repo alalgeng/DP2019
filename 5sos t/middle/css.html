@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="utf-8" />
+         <title> CSS </title>
+         <!-- ecternal 외부에서 불러오기 -->
+         <link rel="stylesheet" type="text/css" href="./default.css" />
+         <style>
+         #embeded_target{
+             color:rgb(24, 185, 145);
+         }
+         </style>
+    </head>
+    <body>
+        <div id="external_target"> 익스터널 타겟 </div> <!-- 페이지가 많아지면 유용하게 사용할 수 있음 ''-->
+        <div id="embeded_target"> 엠베디드 방식 </div>
+        <div style="color: cyan"> 인라인 방식 </div> <!-- 부르지 않아도 적용시킬 수 있음 -->
+        <div style="color: rgb(0, 132, 255)"> 인라인 방식 </div>
+
+        <style>
+            /* 전체 선택자 (<!-- --!>) - html과 다르다  , (*) 전체선택자 */
+            *{
+               
+            }
+            /* 요소(element) 선택자 */
+            b{ color: yellowgreen; }
+            /* 클래스(class) 선택자, .마침표(.)  */
+            .c_name{ color:turquoise;}
+            /* 아이디(id) 선택자, 샵기호(#) , 이름 마음대로 짓는거 가능 , 중복 시키지 말자 */
+            #i_name{ color: teal;}
+        </style>
+        전체 선택자
+        <b>볼드체</b>
+        <div class="c_name"> 클래스 선택자 </div>
+        <div id="i_name"> 아이디 선택자 </div>
+
+        <style>
+            /* 가상 요소 선택자 */
+            #virture_target:before{
+                content:"*";
+            }
+            #virture_target:after{
+                content: "*";
+            }
+            #virture_target::first-letter{
+                font-size: 150px;
+            }
+            #virture_target::first-line{
+                color: rgb(138, 255, 177);
+            }
+        </style>
+        <div id="virture_target">
+            개졸려 가아 개졸려 가
+                아 개졸려 가아 개졸려
+                아 개졸려 
+                아 개졸려 가상 요소 선택자
+            </div>
+
+            <style>
+                .virtual_class:first-child{color:  gold;}
+                .virtual_class:last-child{color: red;}
+                .virtual_class:nth-child(2){color: rgb(252, 90, 198);}
+                .virtual_class:nth-child(3){color: salmon;}
+                /* 1st, 2nd , 3rd , 4th , 5th ..... n번째(th) */
+                /* :link :visited :hover :active :focus*/
+                a:link{color: rgb(187, 19, 0);} /* 기본 모습 */
+                a:visited{color: violet;} /* 방문 후 */
+                a:hover{color: tomato;} /* 마우스 올림 */
+                a:active{color: gold;} /* 활성화 */
+                a:focus{color: lightgreen;} /* 집중 */
+            </style>
+            <div> <!-- 부모 parent -->
+            <div class="virtual_class"> 너무 졸려 </div> <!-- 자식 child -->
+            <div class="virtual_class"> 너무 졸려 </div>
+            <div class="virtual_class"> 너무 졸려 </div>
+            <div class="virtual_class"> 가상 클래스 선택자 </div>
+        </div>
+        <a href="#">집으로 가기 (링크 버튼)</a>
+
+        <style>
+            /*하위선택자역할 띄어쓰기 ->  div (여기 띄어쓰기,,!) 없으면 작동이 안됨) li -> 상하관계 */
+            div li{color: lightpink;}
+            /* 자식선택자 부등호(>) - 세밀하게..? - 집게사장,ㅈ,,,,ㄱ[ㅅㅋ*/
+            div>ul>li{text-decoration: underline;}
+            /*선택자 조합(복수선택) , 쉼표(,)*/
+            div,ul,li{font-weight:bold;}
+        </style>
+        <div>
+        <ul>
+            <li>집에가고싶은편 리스트1</li>
+            <li>집에가고싶은편 리스트2</li>
+            <li>집에가고싶은편 리스트3</li>
+            <li>집에가고싶은편 리스트4</li>
+        </ul>
+        </div> 
+
+    </body>
+</html>
