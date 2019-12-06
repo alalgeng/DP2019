@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>레이아웃1</title>
+        <meta charset="utf-8" />
+        <style>
+            /* 쉼표 띄어쓰지 맙시다 웬만하면 */
+            div,header,nav,footer,h1,ul,li{
+                /* margin:10px; /*바깥여백: 10px; */
+                /* border: solid 1px black; */
+                /* 경계선: 실선 1픽셀 두께 검은색; */
+            }
+            header{
+                padding: 30px; /*빈 공간에도 색이 채워졌음 좋겠어요는 패딩, 그냥 싹둑이면 마진*/
+            }
+            nav{
+                padding: 30px;
+            }
+            h1{
+                margin: 0px;
+            }
+            h2{
+                margin: 0px;
+                float: right;
+            }
+            header>ul{
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            #zoom{
+                margin: 9px;
+            }
+            /* header 안에 ul 안에 li 지칭 */
+            header>ul>li{
+                float:left; /*둥둥떠다닌다:왼쪽기준으로*/
+                list-style : none; /*리스트모양:없음*/
+                padding-right: 20px;
+                padding-left: 20px;
+                border-right: solid 2px gray;
+            }
+            /*li 5번째의 실선을 없애버린다*/
+            header>ul>li:nth-child(5){
+                border: none;
+            }
+            .clear { clear:both; height:0; overflow:hidden; }
+            .float_left{ float: left; } /* 공간이 넉넉하면 가로로 나열되지만 공간이 부족하면 후순위부터 내려가게 됨*/
+            .float_right{ float: right;}
+
+            nav{
+                background-color: #eee;
+            }
+
+            nav>ul>li{
+                float:left;
+                list-style : none;
+                padding-right: 20px;
+                padding-right: 10px;
+            }
+
+            nav>ul{
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            .container:nth-child(1){ background-color: rgb(255, 136, 136);}            
+            .container:nth-child(2){ background-color: rgb(221, 158, 85);}
+            .container:nth-child(3){ background-color: rgb(245, 255, 102);}
+            .container:nth-child(4){ background-color: rgb(197, 238, 85);}
+            .content_part{
+                float: left; /*둥둥떠다니게:왼쪽기준으로*/
+                width:480px;
+                margin: 10px;
+            }
+            .container>section>h3{
+                color: white;
+            }
+            .container dt{
+                font-weight:bold;
+                margin-top: 25px;
+                margin-right: 0px;
+                margin-bottom: 25px;
+                margin-left: 0px;
+                margin: 25px 0px; /* 상하값 좌우값*/
+                margin: 25px 0px 25px 0px; /* 상 우 하 좌 시계방향*/
+            }
+            .container dd{
+                margin: 25px 0px; /*바깥여백 : 없음*/
+            }
+            .container>section{
+                /* margin-left: 180px;*/
+                width:1000px;
+                margin-left: auto; /*바깥 여백 - 왼쪽 : 자동*/
+                margin-right: auto;
+            }
+            .container{
+                padding: 30px; /* 내부여백 30 */
+            }
+            footer li{
+                float: left;
+                list-style: none;
+                padding: 0px 10px;
+            }
+            footer ul {
+                padding: 0px;
+            }
+            footer{
+                background-color: #999;
+                padding: 30px;
+            }
+            #wrap{
+                /*width: 1100px; */ /* 고정값 */
+                min-width: 1024px; /*최소 넓이 */
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <header>
+                <h1 class="float_left">
+                    <img src="img1/bluebox_logo.jpg" />
+                </h1>
+                <ul class="float_left">
+                    <li><a href="INDEX.html">INDEX</a></li>
+                    <li>ABOUT</li>
+                    <li>SERVICES</li>
+                    <li>WORKS</li>
+                    <li>BLOG</li>
+                    <li>CONTACT US</li>
+                    <div class="clear"></div>
+                  <!-- 만병통치약 아님 아무데나 남발하지마셈-->
+                </ul>
+              <div id="zoom" class="float_right">
+                  <img src="img1/head_zoom.jpg" />
+              </div>
+              <div class="clear"></div>
+          </header>
+          <nav>
+              <h2 class="float_left">
+                  See Our Works
+              </h2>
+              <ul class="float_right">
+                  <li>Web Design</li>
+                  <li>Icons</li>
+                  <li>Illustlations</li>
+                  <li>Misc</li>
+                  <div class="clear"></div> <!--문제를 발생시킨 아이들 맨뒤에 붙인다.-->
+              </ul>
+              <div class="clear"></div> <!--이유를 잘 파악하고 사용할 것-->
+          </nav>
+          <div>
+              <div class="container">
+                  <section>
+                      <h3>Web Design</h3>
+                      <div class="content_part">
+                            <img src="img1/layout1_img1_web design.jpg" />
+                            <dl>
+                                <dt>Lorem ipsum dolor sit amet</dt>
+                                <dd>
+                                Consectetur adipiscing elit. Suspendisse sed leo tellus.
+                                Praesent nec vehicula ligula, non laoreet ligula. Maecenas
+                                at massa eget orci porttitor semper.
+                                </dd>
+                            </dl>
+                      </div>
+                      <div class="content_part">
+                            <img src="img1/layout1_img2.jpg" />
+                            <dl>
+                                <dt>Lorem ipsum dolor sit amet</dt>
+                                <dd>
+                                Consectetur adipiscing elit. Suspendisse sed leo tellus.
+                                Praesent nec vehicula ligula, non laoreet ligula. Maecenas
+                                at massa eget orci porttitor semper.
+                                </dd>
+                            </dl>
+                      </div>
+                      <div class="clear"></div>
+                  </section>
+              </div>
+              <div class="container">
+                    <section>
+                        <h3>Web Design</h3>
+                        <div class="content_part">
+                              <img src="img1/layout1_img3.jpg" />
+                              <dl>
+                                  <dt>Lorem ipsum dolor sit amet</dt>
+                                  <dd>
+                                  Consectetur adipiscing elit. Suspendisse sed leo tellus.
+                                  Praesent nec vehicula ligula, non laoreet ligula. Maecenas
+                                  at massa eget orci porttitor semper.
+                                  </dd>
+                              </dl>
+                        </div>
+                        <div class="content_part">
+                              <img src="img1/layout1_img4.jpg" />
+                              <dl>
+                                  <dt>Lorem ipsum dolor sit amet</dt>
+                                  <dd>
+                                  Consectetur adipiscing elit. Suspendisse sed leo tellus.
+                                  Praesent nec vehicula ligula, non laoreet ligula. Maecenas
+                                  at massa eget orci porttitor semper.
+                                  </dd>
+                              </dl>
+                        </div>
+                        <div class="clear"></div>
+                    </section>
+              </div>
+              <div class="container">
+                    <section>
+                        <h3>Web Design</h3>
+                        <div class="content_part">
+                              <img src="img1/layout1_img5.jpg" />
+                              <dl>
+                                  <dt>Lorem ipsum dolor sit amet</dt>
+                                  <dd>
+                                  Consectetur adipiscing elit. Suspendisse sed leo tellus.
+                                  Praesent nec vehicula ligula, non laoreet ligula. Maecenas
+                                  at massa eget orci porttitor semper.
+                                  </dd>
+                              </dl>
+                        </div>
+                        <div class="content_part">
+                              <img src="img1/layout1_img6.jpg" />
+                              <dl>
+                                  <dt>Lorem ipsum dolor sit amet</dt>
+                                  <dd>
+                                  Consectetur adipiscing elit. Suspendisse sed leo tellus.
+                                  Praesent nec vehicula ligula, non laoreet ligula. Maecenas
+                                  at massa eget orci porttitor semper.
+                                  </dd>
+                              </dl>
+                        </div>
+                        <div class="clear"></div>
+                    </section>
+              </div>
+              <div class="container">
+                    <section>
+                        <h3>Web Design</h3>
+                        <div class="content_part">
+                              <img src="img1/layout1_img7.jpg" />
+                              <dl>
+                                  <dt>Lorem ipsum dolor sit amet</dt>
+                                  <dd>
+                                  Consectetur adipiscing elit. Suspendisse sed leo tellus.
+                                  Praesent nec vehicula ligula, non laoreet ligula. Maecenas
+                                  at massa eget orci porttitor semper.
+                                  </dd>
+                              </dl>
+                        </div>
+                        <div class="content_part">
+                              <img src="img1/layout1_img8.jpg" />
+                              <dl>
+                                  <dt>Lorem ipsum dolor sit amet</dt>
+                                  <dd>
+                                  Consectetur adipiscing elit. Suspendisse sed leo tellus.
+                                  Praesent nec vehicula ligula, non laoreet ligula. Maecenas
+                                  at massa eget orci porttitor semper.
+                                  </dd>
+                              </dl>
+                        </div>
+                        <div class="clear"></div>
+                    </section>
+              </div>
+          </div>
+          <footer>
+              <div class="float_left">
+                  <ul>
+                      <li>Home</li>
+                      <li>About</li>
+                      <li>Services</li>
+                      <li>Work</li>
+                      <li>Blog</li>
+                      <li>Contact us</li>
+                      <div class="clear"></div>
+                  </ul>
+                  <div>ⓒ 2013 BlueBox. All Right Reserved.</div>
+                  <div>
+                      the loges in the design are the property
+                      of their respective owners/copyright holders.
+                  </div>
+                </div>
+                <ul class="float_right">
+                        <li><img src="img1/facebook.png" /></li>
+                        <li><img src="img1/in.png" /></li>
+                        <li><img src="img1/twitter.png" /></li>
+                        <li><img src="img1/pinterest.png" /></li>
+                        <li><img src="img1/농구공,,.png" /></li>
+                        <li><img src="img1/google.png" /></li>
+                        <div class="clear"></div>
+                </ul>
+                <div class="clear"></div>
+          </footer>
+        </div>
+    </body>
+</html>
